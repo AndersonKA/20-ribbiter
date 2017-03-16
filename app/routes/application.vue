@@ -11,11 +11,7 @@
       </div>
     </div>
 
-  <div class="section">
-    <div class="container">
       <router-view></router-view>
-    </div>
-  </div>
 
   </div>
 </template>

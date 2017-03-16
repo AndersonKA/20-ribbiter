@@ -4,6 +4,8 @@ import VueRouter from 'vue-router';
 
 import App from './routes/application.vue';
 import Index from './routes/index.vue';
+import Register from './routes/register.vue';
+import Login from './routes/register.vue';
 
 Vue.use(VueRouter);
 
@@ -13,6 +15,17 @@ const routes = [
     name: 'index',
     component: Index,
   },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register,
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+  },
+
 ];
 
 const router = new VueRouter({

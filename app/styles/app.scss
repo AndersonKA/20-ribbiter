@@ -52,18 +52,24 @@ $font: 'Dosis', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 3rem;
   font-family: $font;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 .button {
-  justify-content: center;
   margin: 0 auto;
   padding: 0.5rem;
   border-style: none;
   border-radius: 5%;
   outline: none;
   background: $c-primary;
+  text-decoration: none;
+  color: $c-pure-white;
 }
