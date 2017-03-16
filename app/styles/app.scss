@@ -37,6 +37,15 @@ $font: 'Dosis', sans-serif;
   }
 }
 
+// index
+.welcome {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+
+}
+
 // multiple
 
 .container {
@@ -111,7 +120,6 @@ form {
   border-bottom: 0.025rem solid $c-secondary;
 }
 
-
 // users
 .grid {
   display: flex;
@@ -120,22 +128,48 @@ form {
 }
 
 .usercard {
+  display: flex;
   flex-basis: calc(100% / 3 - 1rem - 1rem);
-  flex-grow: 1;
   margin: 1rem;
+  padding: 1rem;
+  background: $c-pure-white;
+  box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
+
+  &__pic {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 0.5rem;
+  }
+
+  &__username {
+    color: $c-secondary;
+    text-decoration: underline;
+  }
 }
 
 .heading {
+  margin: 1rem 0;
   border-bottom: 0.025rem solid $c-secondary;
   font-family: $font;
   font-size: 1.5rem;
 }
 
-.usercard {
+// Ribbits
+.outer {
   display: flex;
+}
 
-  &__pic {
-    width: 5rem;
-    height: 5rem;
-  }
+.newcard {
+  min-width: 20rem;
+  max-width: 20rem;
+  margin: 1rem;
+  background: $c-pure-white;
+  font-family: $font;
+}
+
+.happeningcard {
+  display: flex;
+  min-width: 40rem;
+  max-width: 40rem;
+
 }

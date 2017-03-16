@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="appindex">
     <div class="card">
-      <h2>Welcome to Ribitter!</h2>
+      <h2 class="welcome">Welcome to Ribitter!</h2>
         <div class="buttons">
           <router-link class="button" :to="{ name: 'register' }">Register</router-link>
           <router-link class="button" :to="{ name: 'login' }">Login</router-link>
