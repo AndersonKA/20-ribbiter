@@ -15,10 +15,10 @@ $m-gutter: 1rem;
 $m-max-width: 60rem;
 
 $font: 'Dosis', sans-serif;
-
 @import 'box-sizing';
 @import 'resets';
 
+// navbar
 .nav {
   display: flex;
   justify-content: space-between;
@@ -37,10 +37,10 @@ $font: 'Dosis', sans-serif;
   }
 }
 
+// multiple
 
 .container {
-  width: 100%;
-  max-width: 100%;
+  width: $m-max-width;
   margin: 0 auto;
 }
 
@@ -50,26 +50,92 @@ $font: 'Dosis', sans-serif;
 
 .card {
   display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  min-width: 25rem;
   margin: 0 auto;
-  padding: 3rem;
+  transform: translate(-50%, -50%);
+  background: $c-pure-white;
   font-family: $font;
 }
 
 .buttons {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1rem;
 }
 
 .button {
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0.5rem;
   padding: 0.5rem;
   border-style: none;
   border-radius: 5%;
   outline: none;
   background: $c-primary;
-  text-decoration: none;
   color: $c-pure-white;
+  text-decoration: none;
+}
+
+.button-white {
+  background: $c-white;
+  color: $c-secondary;
+}
+
+form {
+  margin: 1rem;
+}
+
+.field {
+  width: 100%;
+  border-style: none;
+}
+
+.nav-thing {
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background: $c-primary;
+  color: $c-pure-white;
+  font-size: 1.5rem;
+}
+
+.category {
+  width: 100%;
+  margin: 0.5rem 0;
+  border-bottom: 0.025rem solid $c-secondary;
+}
+
+
+// users
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.usercard {
+  flex-basis: calc(100% / 3 - 1rem - 1rem);
+  flex-grow: 1;
+  margin: 1rem;
+}
+
+.heading {
+  border-bottom: 0.025rem solid $c-secondary;
+  font-family: $font;
+  font-size: 1.5rem;
+}
+
+.usercard {
+  display: flex;
+
+  &__pic {
+    width: 5rem;
+    height: 5rem;
+  }
 }

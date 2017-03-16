@@ -5,7 +5,8 @@ import VueRouter from 'vue-router';
 import App from './routes/application.vue';
 import Index from './routes/index.vue';
 import Register from './routes/register.vue';
-import Login from './routes/register.vue';
+import Login from './routes/login.vue';
+import Users from './routes/users.vue';
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login,
+  },
+  {
+    path: '/users',
+    name: 'users',
+    component: Users,
   },
 
 ];
