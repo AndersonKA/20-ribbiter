@@ -9,28 +9,28 @@
               <img src="https://s-media-cache-ak0.pinimg.com/736x/92/9d/3d/929d3d9f76f406b5ac6020323d2d32dc.jpg" alt="" class="usercard__pic">
               <div class="usercard__names">
                 <div class="usercard__name">Queenie</div>
-                <div class="usercard__username">$queenie</div>
+                <div class="username">$queenie</div>
               </div>
             </div>
             <div class="usercard">
               <img src="https://s-media-cache-ak0.pinimg.com/736x/92/9d/3d/929d3d9f76f406b5ac6020323d2d32dc.jpg" alt="" class="usercard__pic">
               <div class="usercard__names">
                 <div class="usercard__name">Queenie</div>
-                <div class="usercard__username">$queenie</div>
+                <div class="username">$queenie</div>
               </div>
             </div>
             <div class="usercard">
               <img src="https://s-media-cache-ak0.pinimg.com/736x/92/9d/3d/929d3d9f76f406b5ac6020323d2d32dc.jpg" alt="" class="usercard__pic">
               <div class="usercard__names">
                 <div class="usercard__name">Queenie</div>
-                <div class="usercard__username">$queenie</div>
+                <div class="username">$queenie</div>
               </div>
             </div>
             <div class="usercard">
               <img src="https://s-media-cache-ak0.pinimg.com/736x/92/9d/3d/929d3d9f76f406b5ac6020323d2d32dc.jpg" alt="" class="usercard__pic">
               <div class="usercard__names">
                 <div class="usercard__name">Queenie</div>
-                <div class="usercard__username">$queenie</div>
+                <div class="username">$queenie</div>
               </div>
             </div>
 
