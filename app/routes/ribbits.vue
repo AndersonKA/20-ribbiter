@@ -58,10 +58,19 @@
 </template>
 
 <script>
+import store from '../store';
+import userResource from '../resources/user';
+const { actionCreators: { findAll } } = userResource;
+
 export default {
   data() {
     return {
+      posts: this.$select('posts'),
     };
+  },
+
+  mounted() {
+    store.dispatch(findAll(this.$route.params.id));
   },
 
   methods: {

@@ -37,7 +37,6 @@ const routes = [
     name: 'ribbits',
     component: Ribbits,
   },
-
 ];
 
 const router = new VueRouter({
