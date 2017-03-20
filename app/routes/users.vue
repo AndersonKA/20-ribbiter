@@ -7,10 +7,12 @@
 
 
             <div class="usercard" v-for="users in users.items">
-              <img src="https://s-media-cache-ak0.pinimg.com/736x/92/9d/3d/929d3d9f76f406b5ac6020323d2d32dc.jpg" alt="" class="usercard__pic">
-              <div class="usercard__names">
-                <p class="usercard__name">{{ users.email }}</p>
-                <div class="username">{{ users.username }}</div>
+              <div class="usercard__info">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/92/9d/3d/929d3d9f76f406b5ac6020323d2d32dc.jpg" alt="" class="usercard__pic">
+                <div class="usercard__names">
+                  <p class="usercard__name">{{ users.email }}</p>
+                  <div class="username">${{ users.username }}</div>
+                </div>
               </div>
             </div>
 

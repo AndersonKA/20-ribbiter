@@ -10,7 +10,7 @@
           <form class="form" v-on:submit.prevent="save"><!---->
 
           <div class="category">
-            <div class="title username">Username</div>
+            <div class="title">Username</div>
             <input type="text" class="field" placeholder="Username" v-model="formValues.username">
           </div>
           <div class="category">
@@ -26,8 +26,8 @@
 
           <div class="buttons">
             <!--this shouldn't be a button?-->
-            <router-link class="button button-white" :to="{ name: 'users' }">Login</router-link>
-            <router-link class="button" :to="{ name: 'login' }">Sign Up</router-link>
+            <router-link class="button button-white" :to="{ name: 'login' }">Login</router-link>
+            <router-link class="button" :to="{ name: 'users' }">Sign Up</router-link>
           </div>
 
         </div>
@@ -60,7 +60,7 @@ export default {
       // Dispatch a new create action
       store.dispatch(create(this.formValues))
         .then(() => {
-          this.$router.push({ name: 'login' });
+          this.$router.push({ name: 'users' });
         }).catch(() => {});
     },
 

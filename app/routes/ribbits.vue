@@ -5,31 +5,31 @@
         <div class="heading">Recent Ribbits</div>
           <div class="outer">
 
-            <div class="newcard">
+            <form v-on:submit.prevent="saveRibbit" class="newcard">
               <div class="nav-thing">New Ribbit</div>
-                <div class="newcard__middle">
-                  <div class="title newcard__title">What's Going On?</div>
-                  <textarea cols="46" rows="10" class="newcard__field"></textarea>
-                </div>
+              <div class="newcard__middle">
+                <div class="title newcard__title">What's Going On?</div>
+                <textarea v-model="formValues.body" cols="46" rows="10" class="newcard__field"></textarea>
+              </div>
               <div class="buttons">
                 <router-link class="button button-white" :to="{ name: 'ribbits' }">Clear</router-link>
-                <router-link class="button" :to="{ name: 'login' }">Save</router-link>
+                <button class="button">doesn't work yet!</button>
               </div>
-            </div>
+            </form>
 
             <div class="rightside">
-            <div class="happeningcard" v-for="posts in posts.items">
+            <div class="happeningcard" >
               <div class="nav-thing">See What's Happening</div>
               <div class="happeningcard__main">
                 <!--these probably need to be links?-->
 
-                <div class="happeningcard__new">
+                <div class="happeningcard__new" >
                   <div class="happeningcard__new--words">Load new ribbits</div>
                 </div>
 
-                <div class="happeningcard__post">
-                  <div class="username">{{ posts.username }}</div>
-                  <div class="happeningcard__post--text">{{ posts.body }}</div>
+                <div class="happeningcard__post" v-for="post in posts.items">
+                  <div class="username">${{ post.user.username }}</div>
+                  <div class="happeningcard__post--text">{{ post.body }}</div>
                 </div>
               </div>
             </div>
@@ -44,9 +44,9 @@
 
 <script>
 import store from '../store';
-import userResource from '../resources/user';
-const { actionCreators: { findAll } } = userResource;
-const { actionCreators: { create } } = userResource;
+import postResource from '../resources/post';
+const { actionCreators: { findAll } } = postResource;
+const { actionCreators: { create } } = postResource;
 
 export default {
   data() {
@@ -59,16 +59,14 @@ export default {
   },
 
   mounted() {
-    store.dispatch(findAll(this.$route.params.id));
+    store.dispatch(findAll());
   },
 
   methods: {
-    save() {
-      // Dispatch a new create action
-      store.dispatch(create(this.formValues))
-        .then(() => {
-          this.$router.push({ name: 'login' });
-        }).catch(() => {});
+    saveRibbit() {
+      store.dispatch(create(this.formValues));
+    },
+    clear() {
     },
   },
 };
