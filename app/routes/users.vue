@@ -3,15 +3,17 @@
     <div class="section">
       <div class="container">
         <div class="heading">Users</div>
-        <div class="grid" v-for="users in users.items">
+        <div class="grid" >
 
-            <div class="usercard">
+
+            <div class="usercard" v-for="users in users.items">
               <img src="https://s-media-cache-ak0.pinimg.com/736x/92/9d/3d/929d3d9f76f406b5ac6020323d2d32dc.jpg" alt="" class="usercard__pic">
               <div class="usercard__names">
-                <div class="usercard__name">{{ users.name }}</div>
-                <div class="username">{{ user.username }}</div>
+                <p class="usercard__name">{{ users.email }}</p>
+                <div class="username">{{ users.username }}</div>
               </div>
             </div>
+
 
         </div>
       </div>

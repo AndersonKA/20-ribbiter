@@ -17,8 +17,8 @@
               </div>
             </div>
 
-
-            <div class="happeningcard">
+            <div class="rightside">
+            <div class="happeningcard" v-for="posts in posts.items">
               <div class="nav-thing">See What's Happening</div>
               <div class="happeningcard__main">
                 <!--these probably need to be links?-->
@@ -28,26 +28,11 @@
                 </div>
 
                 <div class="happeningcard__post">
-                  <div class="username">$username</div>
-                  <div class="happeningcard__post--text">text</div>
+                  <div class="username">{{ posts.username }}</div>
+                  <div class="happeningcard__post--text">{{ posts.body }}</div>
                 </div>
-
-                <div class="happeningcard__post">
-                  <div class="username">$username</div>
-                  <div class="happeningcard__post--text">text</div>
-                </div>
-
-                <div class="happeningcard__post">
-                  <div class="username">$username</div>
-                  <div class="happeningcard__post--text">text</div>
-                </div>
-
-                <div class="happeningcard__post">
-                  <div class="username">$username</div>
-                  <div class="happeningcard__post--text">text</div>
-                </div>
-
               </div>
+            </div>
             </div>
 
 
@@ -61,11 +46,15 @@
 import store from '../store';
 import userResource from '../resources/user';
 const { actionCreators: { findAll } } = userResource;
+const { actionCreators: { create } } = userResource;
 
 export default {
   data() {
     return {
       posts: this.$select('posts'),
+      formValues: {
+        body: ''
+      },
     };
   },
 
@@ -74,7 +63,13 @@ export default {
   },
 
   methods: {
-
+    save() {
+      // Dispatch a new create action
+      store.dispatch(create(this.formValues))
+        .then(() => {
+          this.$router.push({ name: 'login' });
+        }).catch(() => {});
+    },
   },
 };
 </script>

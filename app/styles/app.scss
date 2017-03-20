@@ -132,12 +132,12 @@ form {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: -1rem;
 }
 
 .usercard {
   display: flex;
-  flex-basis: calc(100% / 3 - 1rem - 1rem);
+  flex-basis: calc(100% / 3 - 2rem);
   margin: 1rem;
   padding: 1rem;
   background: $c-pure-white;
@@ -180,7 +180,6 @@ form {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-
   }
 
   &__field {
@@ -194,6 +193,7 @@ form {
 .happeningcard {
   min-width: 38rem;
   max-width: 38rem;
+  margin: 1rem 0;
   background: $c-pure-white;
   font-family: $font;
   box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
