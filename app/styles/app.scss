@@ -3,4 +3,251 @@
 
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
+
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7fc6bc;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+$c-red: #d13513;
+
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+
+$font: 'Dosis', sans-serif;
 @import 'box-sizing';
+@import 'resets';
+
+// navbar
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: $c-primary;
+  color: $c-pure-white;
+  font-family: $font;
+  font-size: 1.25rem;
+}
+
+.right {
+  display: flex;
+
+  &__words {
+    padding: 0 0.5rem;
+  }
+}
+
+.nav-link {
+  outline: none;
+  background: $c-primary;
+  color: $c-pure-white;
+  text-decoration: none;
+
+  &-right {
+    margin-right: 0.5rem;
+  }
+}
+
+// index
+.welcome {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+// multiple
+
+.container {
+  width: $m-max-width;
+  margin: 0 auto;
+}
+
+.appindex {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  flex-direction: column;
+  min-width: 25rem;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  background: $c-pure-white;
+  font-family: $font;
+  box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0.5rem 0;
+  padding: 0.5rem;
+  border-style: none;
+  border-radius: 5%;
+  outline: none;
+  background: $c-primary;
+  color: $c-pure-white;
+  text-decoration: none;
+
+  &:hover {
+    background: $c-secondary;
+  }
+}
+
+.button-white {
+  background: $c-white;
+  color: $c-secondary;
+
+  &:hover {
+    background: $c-primary;
+    color: $c-pure-white;
+  }
+}
+
+form {
+  margin: 1rem;
+}
+
+.field {
+  width: 100%;
+  border-style: none;
+  outline: none;
+}
+
+.nav-thing {
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background: $c-primary;
+  color: $c-pure-white;
+  font-size: 1.5rem;
+}
+
+.category {
+  width: 100%;
+  margin: 0.5rem 0;
+  border-bottom: 0.15rem solid $c-secondary;
+}
+
+.username {
+  color: $c-secondary;
+  text-decoration: underline;
+}
+
+.alert {
+  background: $c-red;
+  color: $c-pure-white;
+}
+
+// users
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.usercard {
+  flex-basis: calc(100% / 3 - 2rem);
+  flex-grow: 1;
+  margin: 0 1rem;
+
+  &__info {
+    display: flex;
+    padding: 1rem;
+    background: $c-pure-white;
+    box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
+  }
+
+  &__pic {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 0.5rem;
+  }
+}
+
+.heading {
+  margin: 1rem 0;
+  border-bottom: 0.025rem solid $c-secondary;
+  font-family: $font;
+  font-size: 1.5rem;
+}
+
+// Ribbits
+.outer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.newcard {
+  min-width: 20rem;
+  max-width: 20rem;
+  max-height: 19rem;
+  margin-left: 0;
+  background: $c-pure-white;
+  font-family: $font;
+  box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
+
+  &__title {
+    margin: 1rem 0.5rem 0;
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__field {
+    margin: 1rem 0.5rem;
+    border: 0;
+    border-bottom: 0.15rem solid $c-secondary;
+    background: $c-white;
+  }
+}
+
+.happeningcard {
+  min-width: 38rem;
+  max-width: 38rem;
+  margin: 1rem 0;
+  background: $c-pure-white;
+  font-family: $font;
+  box-shadow: 0 0 0.5rem 0 rgba(#000, 0.4);
+
+  &__main {
+    background: $c-pure-white;
+  }
+
+  &__new {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: $c-white;
+    color: $c-secondary;
+
+    &--words {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__post {
+    padding: 1rem;
+    border-top: 0.15rem solid $c-secondary;
+  }
+}
