@@ -13,7 +13,7 @@
               </div>
               <div class="buttons">
                 <router-link class="button button-white" :to="{ name: 'ribbits' }">Clear</router-link>
-                <button class="button">doesn't work yet!</button>
+                <button class="button">Send</button>
               </div>
             </form>
 
